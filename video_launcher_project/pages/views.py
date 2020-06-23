@@ -12,7 +12,7 @@ class ReqView(APIView):
 
     def post(self, request):
          
-        open_url = request.body.decode('utf-8').trim()
+        open_url = request.body.decode('utf-8')
 
         url = "https://fcm.googleapis.com/fcm/send"
 
