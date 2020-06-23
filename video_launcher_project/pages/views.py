@@ -35,6 +35,8 @@ class ReqView(APIView):
 
         response = requests.request("POST", url, headers=headers, data = json.dumps(data))
 
-        print(response.text.encode('utf8'))
+        resp_text = response.text.encode('utf8')
 
-        return Response("looks like success")
+        print(resp_text)
+
+        return Response(resp_text)
